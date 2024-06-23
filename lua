@@ -9,3 +9,34 @@ Tab:AddToggle({
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/test2/main/lua", true))()(value)
 	end
 })
+Name = "norml ESP and Hitbox body",
+	Default = false,
+	Callback = function(value)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/Hitbox-/main/lua", true))()(value)
+	end
+})
+Name = "legit ESP and Hitbox body",
+	Default = false,
+	Callback = function(value)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/Hitvox-legit/main/lua", true))()(value)
+	end
+})
+Tab:AddButton({
+	Name = "Crosshair",
+	Callback = function()
+      		CrossHairX.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+CrossHairX.Thickness = 1
+CrossHairX.ZIndex = 3
+CrossHairX.Visible = true
+CrossHairX.Filled = true
+CrossHairX.Radius = 3
+CrossHairX.Color = Color3.fromRGB(144, 66, 245)
+  	end    
+})
+Tab:AddButton({
+	Name = "sound",
+	Callback = function()
+      		game:GetService("SoundService").PlayerHitHeadshot.EqualizerSoundEffect.HighGain = -1.5
+game:GetService("SoundService").PlayerHitHeadshot.SoundId =  "rbxassetid://8726881116"
+  	end    
+})
