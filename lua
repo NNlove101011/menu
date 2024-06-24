@@ -1,42 +1,17 @@
 local player = game.Players.LocalPlayer local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "trident survival v4 | NNhub", HidePremium = false, SaveConfig = true, ConfigFolder = "NNhub"}) --[[ Name = - The name of the UI. HidePremium = - Whether or not the user details shows Premium status or not. SaveConfig = - Toggles the config saving in the UI. ConfigFolder = - The name of the folder where the configs are saved. IntroEnabled = false - Whether or not to show the intro animation. IntroText = - Text to show in the intro animation. IntroIcon = - URL to the image you want to use in the intro animation. Icon = - URL to the image you want displayed on the window. CloseCallback = - Function to execute when the window is closed. ]]
 local Tab = Window:MakeTab({ Name = "main", Icon = "rbxassetid://4483345998", PremiumOnly = false }) --[[ Name = - The name of the tab. Icon = - The icon of the tab. PremiumOnly = - Makes the tab accessible to Sirus Premium users only. ]]
+------------------------------
+
+------------------------------
+Tab:AddButton({ Name = "ESP&hitboxHEAD(rage)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/test2/main/lua", true))() end })
+
+Tab:AddButton({ Name = "ESP&hitbox body(medium)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/Hitbox-/main/lua", true))() end})
+------------------------------
+Tab:AddButton({ Name = "ESP&Hitbox body(legit)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/Hitvox-legit/main/lua", true))() end})
+------------------------------
+local Tab = Window:MakeTab({ Name = "Visual", Icon = "rbxassetid://4483345998", PremiumOnly = false })
+------------------------------
 Tab:AddButton({ Name = "Night vision", Callback = function() local Light = game:GetService("Lighting") function dofullbright() Light.Ambient = Color3.new(1, 1, 1) Light.ColorShift_Bottom = Color3.new(1, 1, 1) Light.ColorShift_Top = Color3.new(1, 1, 1)end dofullbright() Light.LightingChanged:Connect(dofullbright) end }) --[[ Name = - The name of the button. Callback = - The function of the button. ]]
-Tab:AddToggle({
-	Name = "Rage ESP and Hitbox head",
-	Default = false,
-	Callback = function(value)
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/test2/main/lua", true))()(value)
-	end
-})
-Name = "norml ESP and Hitbox body",
-	Default = false,
-	Callback = function(value)
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/Hitbox-/main/lua", true))()(value)
-	end
-})
-Name = "legit ESP and Hitbox body",
-	Default = false,
-	Callback = function(value)
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/Hitvox-legit/main/lua", true))()(value)
-	end
-})
-Tab:AddButton({
-	Name = "Crosshair",
-	Callback = function()
-      		CrossHairX.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
-CrossHairX.Thickness = 1
-CrossHairX.ZIndex = 3
-CrossHairX.Visible = true
-CrossHairX.Filled = true
-CrossHairX.Radius = 3
-CrossHairX.Color = Color3.fromRGB(144, 66, 245)
-  	end    
-})
-Tab:AddButton({
-	Name = "sound",
-	Callback = function()
-      		game:GetService("SoundService").PlayerHitHeadshot.EqualizerSoundEffect.HighGain = -1.5
-game:GetService("SoundService").PlayerHitHeadshot.SoundId =  "rbxassetid://8726881116"
-  	end    
-})
+------------------------------
+Tab:AddButton({ Name = "Crosshair", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Crosshair-Script/main/Crosshair.lua"))() end})
