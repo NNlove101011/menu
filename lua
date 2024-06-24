@@ -4,9 +4,11 @@ local Tab = Window:MakeTab({ Name = "main", Icon = "rbxassetid://4483345998", Pr
 ------------------------------
 
 ------------------------------
-Tab:AddButton({ Name = "ESP&hitboxHEAD(rage)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/test2/main/lua", true))() end })
-
-Tab:AddButton({ Name = "ESP&hitbox body(medium)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/Hitbox-/main/lua", true))() end})
+Tab:AddButton({ Name = "ESP&hitboxHEAD(rage=7zxy; possible ban)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/test2/main/lua", true))() end })
+------------------------------
+Tab:AddButton({ Name = "ESP&hitboxHEAD(small heads=5zxy; possible ban)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/test2/main/lua", true))() end })
+------------------------------
+Tab:AddButton({ Name = "ESP&hitbox body(medium=7 zxy; possible ban)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/Hitbox-/main/lua", true))() end})
 ------------------------------
 Tab:AddButton({ Name = "ESP&Hitbox body(legit)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NNlove101011/Hitvox-legit/main/lua", true))() end})
 ------------------------------
